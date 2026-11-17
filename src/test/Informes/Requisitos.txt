@@ -1,0 +1,171 @@
+A continuación se presentan los **requisitos funcionales** de la aplicación web **SauceDemo** ([https://www.saucedemo.com/](https://www.saucedemo.com/)), organizados por módulos. Estos requisitos describen las funcionalidades que ofrece el sistema desde la perspectiva del usuario. Están basados en el comportamiento observable de la aplicación y su flujo de navegación. ([SauceDemoProject][1])
+
+# Requisitos Funcionales de SauceDemo
+
+## 1. Autenticación
+
+**RF-01.** El sistema debe permitir el ingreso mediante un nombre de usuario y contraseña.
+
+**RF-02.** El sistema debe validar las credenciales ingresadas.
+
+**RF-03.** El sistema debe permitir el acceso cuando las credenciales sean válidas.
+
+**RF-04.** El sistema debe mostrar un mensaje de error cuando las credenciales sean inválidas.
+
+**RF-05.** El sistema debe impedir el acceso a usuarios bloqueados.
+
+**RF-06.** El sistema debe ocultar la contraseña mientras se escribe.
+
+**RF-07.** El sistema debe permitir iniciar sesión presionando el botón **Login** o la tecla **Enter**.
+
+---
+
+## 2. Catálogo de productos
+
+**RF-08.** El sistema debe mostrar el listado de productos disponibles.
+
+**RF-09.** Cada producto debe mostrar:
+
+* Imagen.
+* Nombre.
+* Descripción.
+* Precio.
+* Botón **Add to cart**.
+
+**RF-10.** El sistema debe permitir visualizar el detalle de un producto al seleccionar su nombre o imagen.
+
+**RF-11.** El sistema debe permitir ordenar los productos por:
+
+* Nombre (A-Z).
+* Nombre (Z-A).
+* Precio (menor a mayor).
+* Precio (mayor a menor).
+
+---
+
+## 3. Carrito de compras
+
+**RF-12.** El sistema debe permitir agregar productos al carrito.
+
+**RF-13.** El sistema debe actualizar el contador del carrito al agregar productos.
+
+**RF-14.** El sistema debe permitir eliminar productos del carrito.
+
+**RF-15.** El sistema debe mostrar los productos agregados.
+
+**RF-16.** El sistema debe mostrar para cada producto:
+
+* Nombre.
+* Descripción.
+* Precio.
+* Cantidad.
+
+**RF-17.** El sistema debe permitir regresar al catálogo mediante el botón **Continue Shopping**.
+
+---
+
+## 4. Proceso de compra (Checkout)
+
+### Información del comprador
+
+**RF-18.** El sistema debe solicitar:
+
+* Nombre.
+* Apellido.
+* Código postal.
+
+**RF-19.** El sistema debe validar que todos los campos obligatorios estén completos.
+
+**RF-20.** El sistema debe mostrar mensajes de error cuando falte información obligatoria.
+
+---
+
+### Resumen de compra
+
+**RF-21.** El sistema debe mostrar un resumen del pedido.
+
+**RF-22.** El sistema debe mostrar:
+
+* Productos seleccionados.
+* Precio de cada producto.
+* Subtotal.
+* Impuestos.
+* Total.
+
+**RF-23.** El sistema debe permitir cancelar la compra.
+
+**RF-24.** El sistema debe permitir finalizar la compra.
+
+---
+
+### Confirmación
+
+**RF-25.** El sistema debe mostrar un mensaje de confirmación cuando la compra finalice correctamente.
+
+**RF-26.** El sistema debe permitir regresar al catálogo después de finalizar la compra.
+
+---
+
+## 5. Menú lateral
+
+**RF-27.** El sistema debe permitir abrir y cerrar el menú lateral.
+
+**RF-28.** El menú debe incluir las opciones:
+
+* All Items.
+* About.
+* Logout.
+* Reset App State.
+
+**RF-29.** El sistema debe cerrar la sesión al seleccionar **Logout**.
+
+**RF-30.** El sistema debe reiniciar el estado de la aplicación al seleccionar **Reset App State**.
+
+---
+
+## 6. Navegación
+
+**RF-31.** El sistema debe permitir navegar entre:
+
+* Inicio de sesión.
+* Catálogo.
+* Detalle del producto.
+* Carrito.
+* Checkout.
+* Confirmación.
+
+**RF-32.** El sistema debe impedir acceder al catálogo sin iniciar sesión.
+
+---
+
+## 7. Gestión del estado
+
+**RF-33.** El sistema debe mantener el contenido del carrito durante la sesión del usuario.
+
+**RF-34.** El sistema debe actualizar automáticamente los botones **Add to cart** y **Remove** según el estado del producto.
+
+---
+
+## 8. Cierre de sesión
+
+**RF-35.** El sistema debe cerrar la sesión del usuario cuando seleccione **Logout**.
+
+**RF-36.** El sistema debe redirigir al formulario de inicio de sesión tras cerrar sesión.
+
+---
+
+## Resumen de módulos
+
+| Módulo           | Funcionalidades                                           |
+| ---------------- | --------------------------------------------------------- |
+| Inicio de sesión | Autenticación, validación de usuarios y mensajes de error |
+| Productos        | Listado, detalle y ordenamiento                           |
+| Carrito          | Agregar, eliminar y visualizar productos                  |
+| Checkout         | Captura de datos, validaciones y resumen de compra        |
+| Confirmación     | Finalización de la compra                                 |
+| Menú             | Navegación, cierre de sesión y reinicio del estado        |
+| Navegación       | Control de acceso y desplazamiento entre páginas          |
+
+Estos requisitos cubren las funcionalidades principales del flujo de compra de SauceDemo: autenticación, exploración del catálogo, gestión del carrito y proceso completo de checkout. ([SauceDemoProject][1])
+
+[1]: https://saucedemoproject05.readthedocs.io/en/latest/SauceDemoProject.src.html?utm_source=chatgpt.com "SauceDemoProject.src package — SauceDemoProject 0.1.0 documentation"
